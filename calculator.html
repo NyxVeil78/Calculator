@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <meta http-equiv="CONTENT-TYPE" content="text/html; charset=UTF-8">
+  <title>Calculator</title>
+  <link rel="website icon" href="logo.png">
+</head>
+<body>
+  <div id="calculator">
+    <h1 class="cal">CALCULATOR</h1>
+    <input placeholder="Equation" id="question">
+    <br>
+    <button onclick="cal()">Evaluate</button>
+    <h5 id="answer" class="cal">Answer Will Be Shown Here!</h5>
+  </div>
+</body>
+</html>
+<style>
+body{
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;   
+  align-items: center;
+  background-color:black;
+}
+#calculator{
+  background:white;
+  width:500px;
+  height:400px;
+  border-radius:5px;
+  box-shadow:5px 7px orange;
+  text-align:center;
+}
+.cal{
+  margin:20px;
+  background:orange;
+  border-radius:25px;
+  text-align:center;
+}
+input{
+  text-align:center;
+  border-radius:5px;
+  border-color:orange;
+  border-radius:5px;
+  height:70px;
+  width:450px;
+  font-size:50px;
+}
+button{
+  border:none;
+  border-radius:5px;
+  background:orange;
+  margin:10px;
+  width:300px;
+  height:100px;
+  font-size:50px;
+}
+h5{
+  justify-content:center;
+  font-size:40px;
+  width:400px;
+  height:100px;
+}
+</style>
+<script>
+function cal(){
+  question=document.getElementById("question").value;
+  answer=eval(question);
+  console.log(answer);
+  document.getElementById("answer").textContent=`Answer Is: ${answer}`;
+}
+</script>
